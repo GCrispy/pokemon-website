@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Info Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+  <div id="username">GCrispy</div>
+</header>
+<body>
+    <div class="container">
+        <h1 class="main-title">Pokémon 🔍</h1>
+        <button id="loadPokemonList" class="top-right-button">Load Pokémon List</button>
+        <input type="text" id="pokemonInput" placeholder="Enter Pokémon name..." />
+        <button onclick="getPokemon()">🔍</button>
+        <button onclick="resetSearch()">❌</button>
+        <button onclick="toggleDarkMode()">Toggle Mode</button>
+        <button onclick="getRandomPokemon()">Random Pokémon</button>
+        <div id="sparkles"></div>
+        <div id="pokemonInfo" class="card hidden">
+          <h2 id="pokemonName"></h2>
+          <img id="pokemonImage" alt="Pokémon Image" />
+          <p><strong>Type:</strong> <span id="pokemonType"></span></p>
+          <p><strong>Height:</strong> <span id="pokemonHeight"></span> dm</p>
+          <p><strong>Weight:</strong> <span id="pokemonWeight"></span> hg</p>
+          <p><strong>HP:</strong> <div class="stat-bar"><div id="pokemonHP" class="fill"></div></div></p>
+          <p><strong>Attack:</strong> <div class="stat-bar"><div id="pokemonAttack" class="fill"></div></div></p>
+          <p><strong>Defense:</strong> <div class="stat-bar"><div id="pokemonDefense" class="fill"></div></div></p>
+          <p><strong>Speed:</strong> <div class="stat-bar"><div id="pokemonSpeed" class="fill"></div></div></p>
+          <p><strong>Special Attack:</strong> <div class="stat-bar"><div id="pokemonSpecialAttack" class="fill"></div></div></p>
+          <p><strong>Special Defense:</strong> <div class="stat-bar"><div id="pokemonSpecialDefense" class="fill"></div></div></p>
+          <button onclick="resetSearch()">❌</button>
+
+          
+      </div>
+      
+        
+        <p id="error" class="error hidden">Pokémon not found. Try again!</p>
+    </div>
+
+    <div id="pokemonListContainer" style="display: none;">
+      <ul id="pokemonList"></ul>
+  </div>
+  
+    <script src="script.js"></script>
+</body>
+</html>
